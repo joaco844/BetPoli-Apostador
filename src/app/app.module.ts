@@ -7,13 +7,16 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { VerifyComponent } from './verify/verify.component';
+import { PartidosComponent } from './partidos/partidos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    VerifyComponent
+    VerifyComponent,
+    PartidosComponent,
+    
   ],
   imports: [
     BrowserModule,

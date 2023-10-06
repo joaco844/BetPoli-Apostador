@@ -1,0 +1,24 @@
+<p>partidos works!</p>
+<table *ngIf=verTabla>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>local</th>
+            <th>visitante</th>
+            <th>gol_local</th>
+            <th>gol_visitante</th>
+            <th>fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of partidosLista; let i = index" [attr.data-index]="i">
+            <td>{{partidosLista[i]._id}}</td>
+            <td>{{partidosLista[i].local}}</td>
+            <td>{{partidosLista[i].visitante}}</td>
+            <td>{{partidosLista[i].gol_local}}</td>
+            <td>{{partidosLista[i].gol_visitante}}</td>
+            <td>{{partidosLista[i].fecha}}</td>
+        </tr>
+    </tbody>
+</table>
+<button (click) = "mostrarPartidos()">Mostrar partidos</button>

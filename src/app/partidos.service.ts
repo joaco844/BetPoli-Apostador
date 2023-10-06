@@ -5,11 +5,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PartidosService {
-  url ="http://172.16.255.204:6969/matches/docs";
-
- 
+  url ="http://172.16.255.204:6969/matches/all";
 
   constructor(private http: HttpClient) { }
 
-  
+  getPartidos(){
+    return this.http.get(this.url);
+  }
 }
